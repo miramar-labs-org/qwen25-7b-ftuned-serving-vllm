@@ -1,0 +1,22 @@
+runtime:
+  kind: vllm-direct
+
+model:
+  base_model_id: "org/model"
+  served_model_name: "my-model"   # stable alias exposed to clients (e.g. biomistral-onc)
+
+adapter:
+  ft_project: ""   # name of the ft-eval project repo (e.g. qwen25-7b-arc-ft-eval-pipeline)
+  max_lora_rank: 16
+
+vllm:
+  dtype: bfloat16
+  gpu_memory_utilization: 0.90
+  max_model_len: 2048
+  port: 8000
+
+deployment:
+  namespace: "qwen25-7b-ftuned-serving-vllm"
+  gpu_type: nvidia-l4
+  spot: true
+  gpu_count: 1

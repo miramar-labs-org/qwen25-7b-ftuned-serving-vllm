@@ -1,0 +1,4 @@
+FROM vllm/vllm-openai:latest
+# Adapter baked in at build time by build-push.yaml (staged from shared DGX storage).
+# Model still pulled from HF Hub at startup — too large to bake in.
+COPY adapter/ /adapter/
