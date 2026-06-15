@@ -2,11 +2,11 @@ runtime:
   kind: vllm-direct
 
 model:
-  base_model_id: "org/model"
-  served_model_name: "my-model"   # stable alias exposed to clients (e.g. biomistral-onc)
+  base_model_id: "Qwen/Qwen2.5-7B-Instruct"
+  served_model_name: "qwen25-arc"   # stable alias exposed to clients
 
 adapter:
-  ft_project: ""   # name of the ft-eval project repo (e.g. qwen25-7b-arc-ft-eval-pipeline)
+  ft_project: "qwen25-7b-arc-ft-eval-pipeline"
   max_lora_rank: 16
 
 vllm:
@@ -17,6 +17,5 @@ vllm:
 
 deployment:
   namespace: "qwen25-7b-ftuned-serving-vllm"
-  gpu_type: nvidia-l4
-  spot: true
+  gpu_type: gb10
   gpu_count: 1

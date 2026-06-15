@@ -1,3 +1,3 @@
-{"prompt": "What is the capital of France?", "expected_keywords": ["Paris"]}
-{"prompt": "In one sentence, what is machine learning?", "expected_keywords": []}
-{"prompt": "What does NSCLC stand for?", "expected_keywords": ["non-small", "lung"]}
+{"prompt": "Which of the following best explains why metals conduct electricity? (A) They have loosely bound electrons (B) They have tightly bound electrons (C) They absorb photons (D) They repel neutrons", "expected_keywords": ["loosely", "electrons"]}
+{"prompt": "A student drops a ball from a height of 1 meter. What force causes the ball to fall?", "expected_keywords": ["gravity"]}
+{"prompt": "What process do plants use to convert sunlight into food?", "expected_keywords": ["photosynthesis"]}
