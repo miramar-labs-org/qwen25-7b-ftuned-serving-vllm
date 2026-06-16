@@ -115,7 +115,7 @@ jobs:
             | kubectl apply --validate=false -f -
 
       - name: Wait for rollout
-        run: kubectl rollout status deployment/vllm -n "$PROJECT_NAME" --timeout=600s
+        run: kubectl rollout status deployment/vllm -n "$PROJECT_NAME" --timeout=1800s
 
       - name: Smoke test
         run: |
@@ -226,7 +226,7 @@ jobs:
             | kubectl apply --validate=false -f -
 
       - name: Wait for rollout
-        run: kubectl rollout status deployment/vllm -n "$PROJECT_NAME" --timeout=600s
+        run: kubectl rollout status deployment/vllm -n "$PROJECT_NAME" --timeout=1800s
 
       - name: Smoke test
         run: |
@@ -337,7 +337,7 @@ jobs:
             | kubectl apply --validate=false -f -
 
       - name: Wait for rollout
-        run: kubectl rollout status deployment/vllm -n "$PROJECT_NAME" --timeout=600s
+        run: kubectl rollout status deployment/vllm -n "$PROJECT_NAME" --timeout=1800s
 
       - name: Smoke test
         run: |
